@@ -145,31 +145,16 @@
                 },
                 addClass1:function(index){
                     this.current1=index;
-                    if(this.current1=="全部"&&this.current2=="全部"&&this.current3=="全部"){
-                        this.getImage();
-                    }
-                    else{
-                        this.ajax2(this.style[ this.current1],this.area[this.current2],this.room[this.current3]);
-                    }
-                   
+                    this.ajax2(this.style[ this.current1],this.area[this.current2],this.room[this.current3]);
                 },
                 addClass2:function(index){
                     this.current2=index;
-                    if(this.current1=="全部"&&this.current2=="全部"&&this.current3=="全部"){
-                        this.getImage();
-                    }
-                    else{
-                        this.ajax2(this.style[ this.current1],this.area[this.current2],this.room[this.current3]);
-                    }
+                    this.ajax2(this.style[ this.current1],this.area[this.current2],this.room[this.current3]);
                 },
                 addClass3:function(index){
                     this.current3=index;
-                    if(this.current1=="全部"&&this.current2=="全部"&&this.current3=="全部"){
-                        this.getImage();
-                    }
-                    else{
-                        this.ajax2(this.style[ this.current1],this.area[this.current2],this.room[this.current3]);
-                    }
+    
+                    this.ajax2(this.style[ this.current1],this.area[this.current2],this.room[this.current3]);
                 },
                 btn(pno){
                     switch(pno){

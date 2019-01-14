@@ -125,14 +125,11 @@ body {
 }
 .case_center .case_flex .case_img img{
     width: 100%;
+    height: 100%;
     display:block;  
     
 }
-.case_center .case_flex .case_img:hover img{
-    transform: scale(1.3, 1.3);opacity:1;
-    transition: all 0.6s;
-    background:rgba(0,0,0,0.5);
-}
+
 
 .case_center .case_flex .case_img img::before,.case_center .case_flex .case_img img::after{
     position:absolute;
@@ -250,3 +247,4 @@ body {
 .sjs{
     font-size: 18px;
 }
+

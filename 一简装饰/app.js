@@ -70,7 +70,15 @@ app.get("/selectAll",(req,res)=>{
   var style = req.query.style;
   var area = req.query.area;
   var room = req.query.room;
-  if(room=="全部" && style=="全部"){
+  if(room=="全部" && style=="全部" && area == "全部"){
+    var sql = "select * from demo LIMIT 1,6";
+    pool.query(sql,(err,result)=>{
+      if(err)throw err;
+      res.send(result);
+      return;
+    });
+  }
+   else if(room=="全部" && style=="全部"){
     var sql = "select * from demo where area=?";
     pool.query(sql,[area],(err,result)=>{
       if(err)throw err;
@@ -107,8 +115,8 @@ app.get("/selectAll",(req,res)=>{
     });
   }
   else if(style=="全部"){
-    var sql = "select * from demo where area=? and area=?";
-    pool.query(sql,[style,area],(err,result)=>{
+    var sql = "select * from demo where room=? and area=?";
+    pool.query(sql,[room,area],(err,result)=>{
       if(err)throw err;
       console.log(result,6);
       res.send(result);
