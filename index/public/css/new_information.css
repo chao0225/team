@@ -52,7 +52,7 @@ body{
   display: flex;
   justify-content: space-between;
   flex-wrap:wrap;
-  width: 100%;
+  /* width: 100%; */
 }
 .news_content .news_content_ul{
   width: 31%;
